@@ -14,7 +14,7 @@ $ npm install --save license-me
 ```js
 const licenseMe = require('license-me')
 
-licenseMe('mit', 'bukinoshita')
+licenseMe('mit', 'Bu Kinoshita')
 // => License created!
 ```
 
