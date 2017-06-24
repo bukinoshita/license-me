@@ -1,13 +1,13 @@
 'use strict'
 
-module.exports = (name, { email, website } = {}) => {
+module.exports = (name, { email, website, year = new Date().getFullYear() } = {}) => {
   const userEmail = email ? `<${email}>` : ''
   const userWebsite = website ? `(${website})` : ''
 
   return (
     `MIT License
 
-Copyright (c) 2017 ${name} ${userEmail} ${userWebsite}
+Copyright (c) ${year} ${name} ${userEmail} ${userWebsite}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

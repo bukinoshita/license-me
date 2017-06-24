@@ -62,7 +62,7 @@ Personal website (only `MIT` License uses it)
 Type: `string`<br/>
 Default: `new Date().getFullYear()`<br/>
 
-License year (only `Apache License 2.0` License uses it)
+License year
 
 
 ## License

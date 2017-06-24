@@ -3,7 +3,7 @@
 const fs = require('fs')
 const writeLicense = require('./lib/write-license')
 
-module.exports = (type = 'MIT', name, opts = {}) => {
+const l = (type = 'MIT', name, opts = {}) => {
   return new Promise((resolve, reject) => {
     if (typeof type !== 'string' || typeof name !== 'string') {
       reject(new TypeError('Type and name must be a string.'))
