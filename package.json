@@ -1,0 +1,23 @@
+{
+  "name": "license-me",
+  "version": "0.0.0",
+  "description": "Create a license for your project",
+  "main": "index.js",
+  "repository": "git@github.com:bukinoshita/license-me.git",
+  "author": "Bu Kinoshita <bukinoshita@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "xo"
+  },
+  "devDependencies": {
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "space": true,
+    "semicolon": false,
+    "esnext": true,
+    "rules": {
+      "object-curly-spacing": 0
+    }
+  }
+}
