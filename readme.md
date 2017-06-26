@@ -64,6 +64,11 @@ Default: `new Date().getFullYear()`<br/>
 License year
 
 
+## Related
+
+- [license-me-cli](https://github.com/bukinoshita/license-me-cli) — Create a license for your project
+
+
 ## License
 
 MIT © [Bu Kinoshita](https://bukinoshita.io)
