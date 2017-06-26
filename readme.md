@@ -37,7 +37,6 @@ License type
 #### name
 
 Type: `string`<br/>
-Required
 
 Your name
 
