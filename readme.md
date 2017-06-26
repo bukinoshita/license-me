@@ -28,7 +28,7 @@ returns a `promise`.
 #### type
 
 Type: `string`<br/>
-Options: `MIT`, `Apache License 2.0`<br/>
+Options: `MIT`, `Apache License 2.0`, `GNU AGPLv3`, `GNU GPLv3`, `GNU LGPLv3`, `Mozilla Public License 2.0`, `The Unlicense`<br/>
 Default: `MIT`<br/>
 Required
 
