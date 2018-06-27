@@ -10,7 +10,7 @@ module.exports = (type = 'MIT', name, opts = {}) => {
     }
 
     fs.writeFile(
-      `${process.cwd()}/license`,
+      opts.file || `${process.cwd()}/license`,
       writeLicense(type.toLowerCase(), name, opts),
       err => {
         if (err) {
