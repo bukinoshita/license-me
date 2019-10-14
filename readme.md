@@ -2,47 +2,50 @@
 
 > Create a license for your project
 
-
 ## Install
 
 ```
-$ npm install --save license-me
+$ yarn add license-me
 ```
 
-
 ## Usage
+
 ```js
 const licenseMe = require('license-me')
 
-licenseMe('mit', 'Bu Kinoshita')
+licenseMe('mit', 'Bu Kinoshita', { year: 2019 })
 // => License created!
 ```
 
-
 ## API
 
-### licenseMe(type, name, [options])
+### licenseMe(name, type, [options])
 
 returns a `promise`.
+
+#### name
+
+Type: `string`<br/>
+Required
+
+Your name
 
 #### type
 
 Type: `string`<br/>
 Options: `MIT`, `Apache License 2.0`, `GNU AGPLv3`, `GNU GPLv3`, `GNU LGPLv3`, `Mozilla Public License 2.0`, `The Unlicense`<br/>
-Default: `MIT`<br/>
 Required
 
 License type
 
-#### name
-
-Type: `string`<br/>
-
-Your name
-
 #### options
 
 Type: `object`
+
+##### year
+
+Type: `string`<br/>
+Required
 
 ##### email
 
@@ -56,18 +59,11 @@ Type: `string`<br/>
 
 Personal website (only `MIT` License uses it)
 
-##### year
-
-Type: `string`<br/>
-Default: `new Date().getFullYear()`<br/>
-
 License year
-
 
 ## Related
 
 - [license-me-cli](https://github.com/bukinoshita/license-me-cli) — Create a license for your project
-
 
 ## License
 

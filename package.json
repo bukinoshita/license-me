@@ -2,13 +2,22 @@
   "name": "license-me",
   "version": "0.0.2",
   "description": "Create a license for your project",
-  "main": "index.js",
-  "repository": "git@github.com:bukinoshita/license-me.git",
+  "repository": "bukinoshita/license-me",
   "author": "Bu Kinoshita <bukinoshita@gmail.com>",
   "license": "MIT",
-  "scripts": {
-    "test": "xo"
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=8"
   },
+  "scripts": {
+    "build": "tsc",
+    "test": "ava",
+    "lint": "xo"
+  },
+  "files": [
+    "dist"
+  ],
+  "types": "dist",
   "keywords": [
     "license",
     "license-me",
@@ -16,14 +25,51 @@
     "github"
   ],
   "devDependencies": {
-    "xo": "0.18.2"
+    "@sindresorhus/tsconfig": "^0.5.0",
+    "@types/fs-extra": "^8.0.0",
+    "ava": "^2.4.0",
+    "eslint-config-prettier": "^6.4.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4",
+    "xo": "^0.25.3"
   },
   "xo": {
-    "space": true,
-    "semicolon": false,
-    "esnext": true,
-    "rules": {
-      "object-curly-spacing": 0
+    "extends": [
+      "prettier"
+    ],
+    "extensions": [
+      "ts"
+    ]
+  },
+  "ava": {
+    "babel": false,
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "files": [
+      "test/**"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --semi false --single-quote --write",
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  },
+  "dependencies": {
+    "fs-extra": "^8.1.0"
   }
 }
