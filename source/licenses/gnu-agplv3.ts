@@ -1,6 +1,7 @@
-'use strict'
+// Types
+import { OptionsType } from '../types'
 
-module.exports = (name, { year = new Date().getFullYear() } = {}) => {
+export function GNUAGPLV3(name: string, options: OptionsType): string {
   return `GNU AFFERO GENERAL PUBLIC LICENSE
 Version 3, 19 November 2007
 
@@ -632,7 +633,7 @@ to attach them to the start of each source file to most effectively
 state the exclusion of warranty; and each file should have at least
 the "copyright" line and a pointer to where the full notice is found.
 
-Copyright (C) ${year} ${name}
+Copyright (C) ${options.year} ${name}
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published

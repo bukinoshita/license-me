@@ -1,13 +1,12 @@
-'use strict'
+import { OptionsType } from '../types'
 
-module.exports = (name, { email, website, year = new Date().getFullYear() } = {}) => {
-  const userEmail = email ? `<${email}>` : ''
-  const userWebsite = website ? `(${website})` : ''
+export function mit(name: string, options: OptionsType): string {
+  const userEmail = options.email ? `<${options.email}>` : ''
+  const userWebsite = options.website ? `(${options.website})` : ''
 
-  return (
-    `MIT License
+  return `MIT License
 
-Copyright (c) ${year} ${name} ${userEmail} ${userWebsite}
+Copyright (c) ${options.year} ${name} ${userEmail} ${userWebsite}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -26,5 +25,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.`
-  )
 }
