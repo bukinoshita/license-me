@@ -25,7 +25,7 @@
     "github"
   ],
   "devDependencies": {
-    "@sindresorhus/tsconfig": "0.5.0",
+    "@sindresorhus/tsconfig": "0.7.0",
     "@types/fs-extra": "8.0.1",
     "ava": "2.4.0",
     "eslint-config-prettier": "6.7.0",
